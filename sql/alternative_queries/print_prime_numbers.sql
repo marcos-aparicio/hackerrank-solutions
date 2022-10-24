@@ -1,18 +1,17 @@
 /*
     SQL SERVER
 */
-DECLARE @output VARCHAR(910)
-SET @output = ''
-DECLARE @primes INT
-SET @primes = 0
-DECLARE @number INT
-SET @number = 1
-DECLARE @testing INT
-SET @testing = 1
+DECLARE @output VARCHAR(1000) = ''
+DECLARE @primes INT = 0
+DECLARE @number INT = 1
+DECLARE GG@testing INT = 1
 
 WHILE @number <= 1000
 BEGIN
-    IF @testing != @number AND @number % @testing = 0
+
+    -- conditions for not being prime, each condition in a different line
+    IF @number = 1 OR 
+       @testing != @number AND @testing != 1 AND @number % @testing = 0
     BEGIN
         SET @testing = 2
         SET @number = @number + 1
@@ -29,6 +28,5 @@ BEGIN
     SET @number = @number + 1
     SET @testing = 2
 END
---deleting unneeded characters
-SET @output = SUBSTRING(@output,3, LEN(@output) - 2)
-SELECT LEFT(@output,LEN(@output)-1)
+--deleting the last & symbol and showing output
+SELECT LEFT(@output, LEN(@output) - 1)
