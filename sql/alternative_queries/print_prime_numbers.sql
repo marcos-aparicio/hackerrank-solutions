@@ -4,7 +4,7 @@
 DECLARE @output VARCHAR(1000) = ''
 DECLARE @primes INT = 0
 DECLARE @number INT = 1
-DECLARE GG@testing INT = 1
+DECLARE @testing INT = 1
 
 WHILE @number <= 1000
 BEGIN
