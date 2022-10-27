@@ -1,2 +1,2 @@
-# hackerrank_solutions
-My hackerrank solutions. hope it is useful
+# Hackerrank Solutions
+My hackerrank solutions. Hope it is useful for somebody
